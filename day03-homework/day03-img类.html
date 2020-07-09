@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .before{
+        position: absolute;
+        top: -10px;
+        left: 0;
+        height: calc(100% + 10px);
+        width: 100%;
+        background-color:rgb(230, 230, 230);
+        border: 2px dotted rgb(200, 200, 200);
+        border-radius: 5px;
+    }
+
+    .after{
+        font-size: 16px;
+        font-style: normal;
+        z-index: 10;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(100, 100, 100);
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div style="position:relative; width: 500px; margin-top: 100px;">
+        <div class="before"></div>
+        <img src="../img/11.jpg" alt="测试图片233">
+        <div class="after">Broken Image of 测试图片</div>
+    </div>
+</body>
+</html>
