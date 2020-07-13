@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+</head>
+<style>
+    .container{
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        margin: 100px auto;
+
+    }
+    .move{
+        width: 2000px;
+        height: 300px;
+        animation: img-move linear 10s infinite;
+    }
+    img{
+        width: 300px;
+        height: 300px;
+    }
+    .move:hover{
+        animation-play-state: paused;
+    }
+    @keyframes img-move{
+        0%{}
+        25%{
+            transform: translateX(-300px);
+        }
+        50%{
+            transform: translateX(-600px);
+        }
+        75%{
+            transform: translateX(-900px);
+        }
+        100%{
+            transform: translateX(-1200px);
+        }
+
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="move" style="font-size: 0px;">
+        <img src="../img/1.jpg" alt="">
+        <img src="../img/201594625769_.pic.jpg" alt="">
+        <img src="../img/231594625770_.pic.jpg" alt="">
+        <img src="../img/221594625769_.pic.jpg" alt="">
+        <img src="../img/1.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
