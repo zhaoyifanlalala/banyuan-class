@@ -269,18 +269,15 @@ ul a:hover{
 
 .center-container{
     height: 70%;
-    /* background-color: aquamarine; */
     padding-top: 16px;
     padding-bottom: 16px;
     /* border-bottom: 1px solid #e1e4e8; */
     margin-left: 15px;
-    /* margin: 0 auto; */
 }
 .repos-visited{
     padding: 16px;
     margin-top: 8px;
     margin-left: 40px;
-    /* width: 643px; */
     height: 80px;
     background-color: #ffffff;
     border: 1px solid #e1e4e8;
@@ -290,6 +287,7 @@ ul a:hover{
     font-weight: 600;
     font-size: 16px;
     display: inline-block;
+    /* position: relative; */
 }
 .repos-visited-name a{
     text-decoration: none;
@@ -313,11 +311,14 @@ ul a:hover{
     width: 68px;
     height: 26px;
     background-color: #fafbfc;
-    margin-left: 300px;
     vertical-align: middle;
     border: 1px solid #e1e4e8;
     border-radius: 6px;
 }
+.stars-btn-right{
+    float: right;
+}
+
 .repo-language-color{
     width: 10px;
     height: 10px;
