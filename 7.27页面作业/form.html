@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>form表单练习</title>
+    <link rel="stylesheet" href="./form.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            表单
+        </div>
+        <div class="fbody">
+            <div class="fbody-container">
+                <div class="input">
+                    <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your Name :</span>
+                    <input class="text-input up" type="username" placeholder="Your Full Name" />
+                </div>
+
+                <span class="userspan" style="padding-left: 130px; display: none;">姓名格式错误，*4到16位，字母，数字，下划线，减号*</span>
+
+                <div class="input">
+                    <span class="text">Your Password :</span>
+                    <input class="text-input down" type="password" />
+                </div>
+
+                <span class="pwdspan" style="padding-left: 150px; display: none;">密码格式错误，*8到15位，字母，数字或下划线</span>
+
+                <div class=" fbody-btn ">
+                    <button type="button " class="button " id='submitButton'>Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var username = document.getElementsByClassName('up')[0]
+    var userspan = document.getElementsByClassName('userspan')[0]
+    var uname = /^([0-9a-zA-Z]|-|_){4,16}$/
+
+    username.oninput = function() {
+        if (uname.test(username.value) == true) {
+            userspan.style.display = 'none'
+        } else {
+            userspan.style.display = 'block'
+        }
+
+    }
+
+
+    var password = document.getElementsByClassName('down')[0]
+    var pwdspan = document.getElementsByClassName('pwdspan')[0]
+    var pwd = /^([0-9a-zA-Z]|_){8,15}$/
+
+    password.oninput = function() {
+        if (pwd.test(password.value) == true) {
+            pwdspan.style.display = 'none'
+        } else {
+            pwdspan.style.display = 'block'
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    // var username = document.getElementsByClassName('up')[0]
+    // var userspan = document.getElementsByClassName('userspan')[0]
+
+    // function checkUsername() {
+
+    //     var uname = /^([0-9a-zA-Z]|-|_){4,16}$/
+    //         // if (userspan == " " || userspan == null) {
+    //         //     userspan.innerHTML = "用户名不能为空 ";
+    //         //     userspan.style.color = "red ";
+    //         //     return false;
+    //         // } 
+    //     if (uname.test(username)) {
+    //         userspan.innerHTML = "用户名通过 ";
+    //         userspan.style.color = "green ";
+    //         return true;
+    //     } else {
+    //         userspan.innerHTML = "用户名格式不符 "
+    //         userspan.style.color = "red ";
+    //         return false;
+    //     }
+
+    // }
+</script>
+
+</html>

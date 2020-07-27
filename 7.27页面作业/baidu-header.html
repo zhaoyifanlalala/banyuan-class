@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baidu-header</title>
+    <link rel="stylesheet" href="./baidu-header.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div>
+                <ul class="header-nav header-left">
+                    <li class="header-li"><a href="#">新闻</a></li>
+                    <li class="header-li"><a href="#">hao123</a></li>
+                    <li class="header-li"><a href="#">地图</a></li>
+                    <li class="header-li"><a href="#">视频</a></li>
+                    <li class="header-li"><a href="#">贴吧</a></li>
+                    <li class="header-li"><a href="#">学术</a></li>
+                    <li class="header-li"><a href="#">更多</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="header-nav header-right">
+                    <li class="header-li"><a class="fight" style="color: red;" href="#">高考加油</a></li>
+                    <li class="header-li setting">
+                        <a href="#">设置</a>
+                    </li>
+                    <button>登录</button>
+                </ul>
+            </div>
+
+        </div>
+        <div class="float">
+            <li class="float-li"><a href="#">搜索设置</a></li>
+            <li class="float-li"><a href="#">高级搜索</a></li>
+            <li class="float-li"><a href="#">关闭预测</a></li>
+            <li class="float-li"><a href="#">隐私设置</a></li>
+            <li class="float-li"><a href="#">关闭热榜</a></li>
+        </div>
+    </header>
+</body>
+<script>
+    var ele = document.getElementsByClassName('setting')[0];
+    var ele1 = document.getElementsByClassName('float')[0]
+    ele.onmouseover = function() {
+        ele1.style.display = 'block'
+
+    }
+    ele1.onmouseover = function() {
+        ele1.style.display = 'block'
+    }
+
+    ele1.onmouseout = function() {
+        ele1.style.display = 'none'
+    }
+
+    ele.onmouseout = function() {
+        ele1.style.display = 'none'
+    }
+</script>
+
+</html>

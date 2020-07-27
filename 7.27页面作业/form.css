@@ -1,0 +1,58 @@
+body {
+    color: gray;
+}
+
+.container {
+    margin: 0 auto;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(240, 240, 240);
+    border: solid 1px gainsboro;
+}
+
+.head {
+    height: 60px;
+    border-bottom: gainsboro 1px solid;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 60px;
+    padding-left: 50px;
+}
+
+.fbody {
+    height: 340px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.fbody-container {
+    padding-top: 20px;
+}
+
+.text {
+    display: inline-block;
+}
+
+.input {
+    padding-top: 40px;
+    padding-left: 35px;
+}
+
+.text-input {
+    width: 300px;
+    height: 30px;
+}
+
+.fbody-btn {
+    padding-top: 60px;
+    padding-left: 150px;
+}
+
+.button {
+    width: 80px;
+    height: 35px;
+    border-radius: 6px;
+    border: 0;
+    background-color: indianred;
+    color: ivory;
+}
