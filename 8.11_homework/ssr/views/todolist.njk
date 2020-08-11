@@ -1,0 +1,32 @@
+{% extends 'layout.njk'%}
+
+{% block content %}
+    <div class="header">
+        <h2>To Do List</h2>
+        <input type="text" class="task-input" placeholder="请输入任务">
+        <span class="add-btn">Add</span>
+    </div>
+
+    <ul class="task-list">
+        {# <li class="task-item">任务1</li>
+        <li class="task-item checked">任务2</li>
+        <li class="task-item">任务3</li> #}
+
+        {% for item in tasks %}
+            {% if item.checked %}
+                <li class="task-item checked" task = {{item.name}} >{{item.name}}</li>
+            {% else %}
+                <li class="task-item" task = {{item.name}} >{{item.name}}</li>
+            {% endif%}
+
+            {# <li class="task-item {{'checked' if item.checked else ''}}" task = {{item.name}}>{{item.name}}</li> #}
+        {% endfor %}
+
+        <!-- <li class="task-item">任务3</li> -->
+    </ul>
+{% endblock %}
+
+{% block script %}
+
+    <script src='/js/todolist.js'></script>
+{%endblock%}

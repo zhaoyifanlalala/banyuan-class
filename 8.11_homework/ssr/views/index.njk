@@ -1,0 +1,58 @@
+{% extends 's.njk' %}
+{# {% block content %}
+<h1>{{title}}</h1>
+<p>Welcome use {{title}}</p>
+<div>{{content}}</div>
+<div>{{test}}</div>
+{% endblock %} #}
+
+
+
+
+{% block top %}
+    {# <div>{{title | capitalize}}</div>     首字母大写 #}
+    {# <div>{{title | join('==+==') | capitalize }}</div>   title里是数组才能用join #}
+
+    {# {%include 'test.njk'%} #}
+
+
+
+    {% if flag %}
+        <div>true</div>
+    {% else %}
+        <div>false</div>
+    {% endif%}
+
+    {% if gender === 0 %}
+        <div>女</div>
+    {% else %}
+        <div>男</div>
+    {% endif%}
+
+
+    {# {% if hungry %}
+        I am hungry
+    {% elif tired %}
+        I am tired
+    {% else %}
+        I am good!
+    {% endif %} #}
+
+
+
+    {% for item in news%}
+        {# <div>{{item.name}} {{item.id}}</div> #}
+        <div>{{item.name}}</div>
+        <div>{{item.id}}</div>
+    {% endfor%}
+
+
+
+{% endblock %}
+
+{% block left %}
+    <div>{{content}}</div>
+{% endblock %}
+{% block right %}
+    <span>this is right block</span>
+{% endblock %}
