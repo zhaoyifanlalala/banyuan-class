@@ -1,0 +1,35 @@
+{% extends 'layout.njk'%}
+
+{% block content %}
+    <div>
+        <span>用户名</span>
+        <input class="username"/>
+    </div>
+
+    <div>
+        <span>密码</span>
+        <input class="password"/>
+    </div>
+
+    <div>
+        <button class="login-btn">登录</button>
+    </div>
+
+
+
+    <div>
+        <input class="input1"/>
+
+        <input class="input2"/>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="/js/login.js"></script>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+
+    <script src='/js/test.js'></script>
+
+{% endblock %}
