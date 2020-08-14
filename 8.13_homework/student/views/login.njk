@@ -1,0 +1,59 @@
+<div>
+    姓名:
+    <input type="text" class="name"/>
+</div>
+
+<div>
+    性别:
+    <select class="gender">
+        <option value="0">女</option>
+        <option value="1">男</option>   
+    </select>
+</div>
+
+<div>
+    年龄:
+    <input type="text" class="age"/>
+</div>
+
+<div>
+    学科:
+    <select class='major'>
+        <option value="web">web</option>
+        <option value="java">java</option>   
+    </select>
+</div>
+
+<div>
+
+    <button class="submit-btn">提交</button>
+</div>
+
+
+<div class='student-list'>
+
+    {% for item in students %}
+        <div>
+            <span>
+                {{ item.name }}
+                {% if item.gender === 1 %}
+                男
+                {% else %}
+                女
+                {% endif %}
+                {{ item.age }}岁
+                学习{{ item.major }}
+            </span>
+        </div>
+    {% endfor %}
+</div>
+
+{% block script %}
+    <script src="/js/login.js"></script>
+
+    <script src="/js/jquery.js"></script>
+
+    <script src="/js/jquery3.5.js"></script>
+
+
+{% endblock %}
