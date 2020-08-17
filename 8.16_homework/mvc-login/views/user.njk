@@ -1,0 +1,36 @@
+{% extends 'layout.njk' %}
+{% block content %}
+    <div>
+        用户名: 
+        <input class="name"/>
+    </div>
+
+    <div>
+        密码: 
+        <input class="password"/>
+    </div>
+
+    <div>
+        <button class="regist-btn" disabled>注册</button>
+    </div>
+
+
+
+    <div>
+        用户名: 
+        <input class="login-name"/>
+    </div>
+
+    <div>
+        密码: 
+        <input class="login-password"/>
+    </div>
+
+    <div>
+        <button class="login-btn">登录</button>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="/js/user.js"></script>
+{% endblock%}
