@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瀑布流</title>
+</head>
+
+<style>
+    /* body{
+        padding: 0;
+        margin: 0;
+    } */
+    .item{
+        width: 200px;
+        position: absolute;
+        /* margin-left: 15px; */
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: rgb(36, 37, 37);
+    }
+
+    .item-1{
+        background-color: blanchedalmond;
+        height: 300px;
+    }
+    .item-2{
+        background-color: violet;
+        height: 250px;
+    }
+    .item-3{
+        background-color: aqua;
+        height: 200px;
+    }
+    .item-4{
+        background-color: salmon;
+        height: 100px;
+    }
+    .item-5{
+        background-color: rgb(113, 124, 124);
+        height: 180px;
+    }
+    .item-6{
+        background-color: skyblue;
+        height: 130px;
+    }
+    .item-7{
+        background-color: slateblue;
+        height: 240px;
+    }
+    .item-8{
+        background-color: steelblue;
+        height: 200px;
+    }
+    .item-9{
+        background-color: rosybrown;
+        height: 350px;
+    }
+    .item-10{
+        background-color: mediumseagreen;
+        height: 160px;
+    }
+    .item-11{
+        background-color: lightcoral;
+        height: 205px;
+    }
+    .item-12{
+        background-color: lightgreen;
+        height: 90px;
+    }
+    .item-13{
+        background-color: skyblue;
+        height: 300px;
+    }
+    .item-14{
+        background-color: skyblue;
+        height: 300px;
+    }
+    .item-15{
+        background-color: skyblue;
+        height: 300px;
+    }
+    .item-16{
+        background-color: skyblue;
+        height: 300px;
+    }
+    .item-17{
+        background-color: skyblue;
+        height: 300px;
+    }
+    .item-18{
+        background-color: skyblue;
+        height: 300px;
+    }
+    .item-19{
+        background-color: skyblue;
+        height: 300px;
+    }
+    .item-20{
+        background-color: skyblue;
+        height: 300px;
+    }
+    .item-21{
+        background-color: skyblue;
+        height: 300px;
+    }
+    .item-22{
+        background-color: skyblue;
+        height: 300px;
+    }
+    .item-23{
+        background-color: skyblue;
+        height: 300px;
+    }
+    .item-24{
+        background-color: skyblue;
+        height: 300px;
+    }
+</style>
+
+<body>
+    <div id="box">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        <div class="item item-6">6</div>
+        <div class="item item-7">7</div>
+        <div class="item item-8">8</div>
+        <div class="item item-9">9</div>
+        <div class="item item-10">10</div>
+        <div class="item item-11">11</div>
+        <div class="item item-12">12</div>
+        <div class="item item-13">13</div>
+        <div class="item item-14">14</div>
+        <div class="item item-15">15</div>
+        <div class="item item-16">16</div>
+        <div class="item item-17">17</div>
+        <div class="item item-18">18</div>
+        <div class="item item-19">19</div>
+        <div class="item item-20">20</div>
+        <div class="item item-21">21</div>
+        <div class="item item-22">22</div>
+        <div class="item item-23">23</div>
+        <div class="item item-24">24</div>
+    </div>
+</body>
+
+<script>
+    
+    let item = document.getElementsByClassName('item')
+
+    let gap = 10
+
+    fall()
+
+    function fall() {
+
+        let pageWidth = window.innerWidth
+
+        let itemWidth = item[0].offsetWidth
+
+        let columns = parseInt(pageWidth / (itemWidth + gap))
+
+        let arr = []
+
+        for (let i = 0; i < item.length; i++) {
+            
+            if (i < columns) {
+                
+                item[i].style.top = 0
+
+                item[i].style.left = (itemWidth + gap) * i + 'px'
+
+                arr.push(item[i].offsetHeight)
+            }else{
+                
+                let minHight = arr[0]
+
+                let index = 0
+
+                for (let j = 0; j < arr.length; j++) {
+                    
+                    if (minHight > arr[j]) {
+                        
+                        minHight = arr[j]
+
+                        index = j
+                    }
+                }
+
+                item[i].style.top = arr[index] + gap + 'px'
+
+                item[i].style.left = item[index].offsetLeft + 'px'
+
+                arr[index] = arr[index] + item[i].offsetHeight + gap 
+            }
+            
+        }
+
+    }
+
+    window.onresize = function () {
+        fall()
+    }
+</script>
+</html>
