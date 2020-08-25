@@ -1,0 +1,89 @@
+.menu-container{
+    margin: 0 auto;
+    width: 320px;
+    height: 620px;
+    border: 1px solid black;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.menu{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-top{
+    height: 480px;
+    border-bottom: 1px solid gray;
+    
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.food-lists{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding-bottom: 23px;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.num-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 82px;
+    height: 30px;
+    color: white;
+    border-radius: 50px;
+    background-color: black;
+    margin-left: 5px;
+}
+.sub-btn{
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+.add-btn{
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+
+
+.menu-bottom{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.total-price{
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-button{
+    width: 280px;
+    height: 40px;
+    background-color: #0d9e65;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    margin-top: 12px;
+}
