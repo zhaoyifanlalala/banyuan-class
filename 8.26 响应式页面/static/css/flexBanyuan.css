@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.post-container{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.header{
+    height: 70px;
+}
+
+.header-title{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.header-title button{
+    border: none;
+    width: 144px;
+    height: 70px;
+    background-color: white;
+    margin-left: 0;
+    outline: none;
+}
+
+.header-title a{
+    color: black;
+    text-decoration: none;
+}
+
+.header-title a:link{
+    color: black;
+}
+.header-title a:visited{
+    color: black;
+}
+
+.header-title a:active{
+    color: black;
+}
+
+.header-title button:hover{
+    background-color: #40c4ff;
+    color: white;
+}
+
+
+/* 头部下面图片 */
+.bg-img{
+    background-image: url('../imgs/bg-iamges.jpg');
+    height: 600px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.img-describe{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.img-title{
+    font-size: 50px;
+    font-family: Geom etria;
+}
+
+.mg-describe p{
+    font-size: 20px;
+}
+
+
+/* post */
+.post{
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 25px;
+}
+
+.first-post{
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-post-img img{
+    width: 500px;
+    height: 280px;
+}
+
+.first-post-container{
+    margin-left: 25px;
+    margin-right: 25px;
+    /* display: flex;
+    justify-content: space-between;
+    flex-direction: column; */
+}
+
+.first-post-title{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Geometria;
+}
+
+.first-post-text{
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: gray;
+}
+
+.first-post-content{
+    border-bottom: 1px solid gainsboro;
+}
+
+.first-post-date{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: gray;
+}
+
+.bootstrap{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bootstrap-title{
+    padding-top: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    border-bottom:1px solid gainsboro;
+}
+
+.bootstrap-author{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom:1px solid gainsboro;
+    color: gray;
+}
+
+.bootstrap-content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: gray;line-height: 1.5;
+    border-bottom:1px solid gainsboro;
+}
+
+.date{
+    color: gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+/* 底部按钮 */
+.bottom{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bottom-btn{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.ball-btn{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border:1px solid #4e71f2;
+    background-color: white;
+    color: #4e71f2;
+    margin-left: 10px;
+}
+
+.ball-btn:hover{
+    background-color: #4e71f2;
+    color: white;
+}
+
+.footer{
+    height: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-title{
+    margin-left: 20px;
+}
+
+.footer-title a{
+    margin-right: 25px;
+    font-size: 13px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-right-icon{
+    display: flex;
+    margin-right: 20px;
+}
+
+.icon{
+    margin-left: 15px;
+}
