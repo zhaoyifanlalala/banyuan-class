@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <link rel="stylesheet" href="./static/search.css">
+</head>
+<body>
+    <input class="search-input"></input>
+    <div class="content"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+    <script>
+        let inputEle = document.getElementsByClassName('search-input')[0]
+        let contentEle = document.getElementsByClassName('content')[0] 
+
+        let array = ['123','12345','3456','1289','202074']
+
+        inputEle.onkeyup = _.debounce(()=>{
+            
+            let value = inputEle.value
+
+            contentEle.innerHTML = ''
+
+            let data = []
+            array.forEach((item)=>{
+                if (_.includes(item,value)) {
+
+                    data.push(item)
+
+                    contentEle.style.display = 'block'
+
+                    let contentText = document.createElement('div')
+
+                    let text =document.createTextNode(item)
+
+                    contentEle.appendChild(contentText)
+
+                    contentText.appendChild(text)
+                }
+            })
+
+            if (value === '') {
+                contentEle.style.display = 'none'
+            }
+            console.log(data)
+            
+        },500)
+
+
+    </script>
+</body>
+</html>
