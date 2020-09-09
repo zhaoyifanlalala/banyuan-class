@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        .container{
+            width: 400px;
+            height: 600px;
+            box-shadow:0px 0px 10px gray;
+            margin: 0 auto;
+            margin-top:40px;
+            border: 1px solid white;
+        }
+        .list{
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            height: 60px;
+            width: 300px;
+            line-height: 60px;
+            margin-top: 40px;
+            background-color: gainsboro;
+            border-radius: 6px;
+        }
+
+        .subBtn{
+            background-color: transparent;
+            color: white;
+            outline: none;
+            font-size: 16px;
+            border: none;
+        }
+        .addBtn{
+            background-color: transparent;
+            color: white;
+            outline: none;
+            font-size: 16px;
+            border: none;
+        }
+        .btn{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60px;
+            height: 20px;
+            color: white;
+            border-radius: 50px;
+            background-color: black;
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        
+        .total-price{
+            margin-top: 30px;
+            font-size: 20px;
+            padding-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div v-for="(item,index) in list" class="list">
+                <div>{{ item.name }}</div>
+                <div :style={display:'flex'}>
+                    <div>￥：{{ item.price }}</div>
+                    <div class="btn">
+                        <button class="subBtn" @click="sub(index)"> - </button>
+                        <div class="count-num">{{ item.count }}</div>
+                        <button class="addBtn" @click="add(index)"> + </button>
+                    </div>
+                </div>
+            </div>
+            <div class="total-price">总价格：{{ allPrice()}}</div>
+        </div>
+            
+
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: '#app',
+
+            data() {
+                return{
+                    list:[
+                        {name:'香蕉',price:10,count:1},
+                        {name:'苹果',price:20,count:1},
+                        {name:'榴莲',price:30,count:1},
+                        {name:'葡萄',price:30,count:1},
+                    ],
+
+                }
+            },
+            computed: {
+                
+            },
+            methods: {
+                
+                sub(index){
+                    if (this.list[index].count > 1) {
+                        return this.list[index].count--
+                    }else{
+                        alert('不能再少了')
+                    }
+                    
+                },
+                add(index){
+                    if (this.list[index].count < 4) {
+                        return this.list[index].count++
+                    }else{
+                        alert('没有库存了')
+                    }
+                },
+
+                allPrice(){
+                    let total = 0
+                    for(let i = 0; i < this.list.length; i++){
+
+                        let count = this.list[i].count
+                        let price = this.list[i].price
+
+                        total += count * price 
+                    }
+                    return total
+                },
+
+            },
+            
+        })
+    </script>
+</body>
+</html>
