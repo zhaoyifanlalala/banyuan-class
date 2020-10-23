@@ -1,0 +1,22 @@
+.right-container{
+    margin-top : 60px;
+    /* margin-left : 100px; */
+}
+.header{
+    display : flex;
+}
+h2{
+    margin-right : 100px;
+    
+}
+.content{
+    width : 800px;
+    height : 500px;
+    padding : 30px 70px;
+    margin-top : 40px;
+    overflow : scroll;
+    border : 1px solid black;
+}
+.borderBbottom{
+    border-bottom : 4px solid #132753;
+}

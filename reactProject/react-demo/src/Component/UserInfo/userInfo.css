@@ -1,0 +1,35 @@
+
+.tab1-container{
+    display : flex;
+    flex-direction : row;
+    width : 100%;
+}
+.user-avatar {
+    width : 80px;
+    height : 80px;
+    border-radius : 50%;
+}
+.user-info {
+    display : flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    align-items : center;
+    width : 660px;
+    margin-left : 40px;
+}
+.user-item-info {
+    width : 280px;
+    padding : 14px 0;
+}
+span {
+    margin-right : 20px;
+    font-size : 16px;
+    font-weight : 400;
+    line-height : 30px;
+    color : #666;
+}
+.emitPassword{
+    font-size : 14px;
+    color : #3e2fc9;
+    cursor : pointer;
+}
