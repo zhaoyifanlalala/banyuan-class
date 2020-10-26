@@ -16,8 +16,10 @@ export default (state = initialState, payload) => {
     return{
       ...state,
       id:payload.data
+
     };
   default:
     return state;
   }
+
 };

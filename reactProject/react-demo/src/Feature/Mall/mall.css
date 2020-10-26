@@ -10,7 +10,7 @@
     top : 0;
     right : 0;
     left : 240px;
-    z-index : 9999;
+    /* z-index : 9999; */
     height : 56px;
     padding : 0 40px;
     background : #fff;

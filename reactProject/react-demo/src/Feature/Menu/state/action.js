@@ -37,7 +37,7 @@ export function buyShop (id){
 
     try {
 
-      const result = await exchangeShop({ id });
+      const result = await exchangeShop(id);
 
       console.log(result);
 

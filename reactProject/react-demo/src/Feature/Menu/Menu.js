@@ -7,6 +7,7 @@ import { buyShop, loadShop } from './state/action';
 import './menu.css';
 import { useHistory } from 'react-router-dom';
 import { loadUser } from '../User/state/action';
+import { message } from 'antd';
 
 export default function Menu () {
   /* eslint-disable */ 
@@ -14,8 +15,15 @@ export default function Menu () {
 
   const history = useHistory();
 
+  // const [showIcon,setShowIcon] = useState(true)
+
   const menu = useSelector(state => state.menu);
-  const user = useSelector(state => state.user.user);
+  // const user = useSelector(state => state.user.user);
+
+  const success = () => {
+    message.success('兑换成功');
+  };
+  
 
   useEffect(() => {
     dispatch(loadShop(history));
@@ -24,6 +32,7 @@ export default function Menu () {
   useEffect(() => {
     dispatch(loadUser());
   }, []);
+
 
   function renderMenu (){
     return _.map(menu.list,(item)=>{
@@ -37,11 +46,13 @@ export default function Menu () {
                 <div className="pro-integral">
                   <p className="price">{ item.price }积分</p>
                 </div>
-                <button className="pro-btn" 
-                onClick={ ()=>{
-                    dispatch(buyShop(item._id));
-                    dispatch(loadUser())
-                }}>兑换</button>
+                  <button className="pro-btn" 
+                  onClick={ 
+                    ()=>{
+                      dispatch(buyShop(item._id));
+                      // alert('兑换成功')
+                      success()
+                  }}>兑换</button>
               </div>
             </div>
           </div>

@@ -14,13 +14,13 @@ import Loading from './Component/Loading/Loading';
 const store = configStore();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={ store }>
-      <App />
-      <Modal/>
-      <Loading/>
-    </Provider>
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <Provider store={ store }>
+    <App />
+    <Modal/>
+    <Loading/>
+  </Provider>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
